@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import About from "../components/About";
 
 const Home: NextPage = () => {
   return (
@@ -27,18 +28,20 @@ const Home: NextPage = () => {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Header />
 
       {/* Hero */}
-      <section id="hero" className="snap-center">
+      <section id="hero" className="snap-start">
         <Hero />
       </section>
 
       {/* About */}
+      <section id="about" className="snap-center">
+        <About />
+      </section>
 
       {/* Experience */}
 

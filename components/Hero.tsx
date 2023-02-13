@@ -9,7 +9,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   const [text, count] = useTypewriter({
-    words: ["Hi, my name is #Razvan", "&&", "I am the <Developer/> you need!"],
+    words: ["Hi, my name is #Razvan", "&&", "I am the <Developer /> you need!"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -36,7 +36,7 @@ const Hero = (props: Props) => {
             <Cursor cursorColor="#F7AB0A" />
           </span>
         </h2>
-        <div className="pt-5 bg-transparent">
+        <div className="pt-5">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
