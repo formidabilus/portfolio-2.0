@@ -5,7 +5,7 @@ type Props = {};
 
 const ExperienceCard = (props: Props) => {
   return (
-    <article>
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         className="w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
         initial={{
@@ -23,21 +23,33 @@ const ExperienceCard = (props: Props) => {
           duration: 1.2,
         }}
         src=""
-        alt="job"
+        alt="job image"
       />
 
-      <div>
-        <h4>Job title</h4>
-        <p>company</p>
-        <div>Tech used</div>
-        <p>Started work... -Ended...</p>
-        <ul>
-          <li>Summary points</li>
-          <li>Summary points</li>
-          <li>Summary points</li>
-          <li>Summary points</li>
-          <li>Summary points</li>
-        </ul>
+      <div className="px-0 md:px-10 ">
+        <h4 className="text-4xl font-light">Job title</h4>
+        <p className="font-bold text-2xl mt-1">company</p>
+        <div className="flex space-x-2 my-2">
+          <img className="h-10 w-10 rounded-full" src="" alt="tech image" />
+          <img className="h-10 w-10 rounded-full" src="" alt="tech image" />
+        </div>
+
+        <p className="uppercase py-5 text-gray-300">
+          Started work... -Ended...
+        </p>
+        <div className="overflow-hidden overflow-y-scroll h-auto">
+          <ul className=" list-disc space-y-4 ml-5 text-lg ">
+            <li>
+              Summary points Summary pointsSummary pointsSummary pointsSummary
+              pointsSummary points Summary points Summary pointsSummary
+              pointsSummary pointsSummary pointsSummary points
+            </li>
+            <li>Summary points</li>
+            <li>Summary points</li>
+            <li>Summary points</li>
+            <li>Summary points</li>
+          </ul>
+        </div>
       </div>
     </article>
   );
