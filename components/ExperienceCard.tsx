@@ -26,7 +26,7 @@ const ExperienceCard = (props: Props) => {
         alt="job image"
       />
 
-      <div className="px-0 md:px-10 ">
+      <div className="px-0 md:px-10">
         <h4 className="text-4xl font-light">Job title</h4>
         <p className="font-bold text-2xl mt-1">company</p>
         <div className="flex space-x-2 my-2">
@@ -37,7 +37,7 @@ const ExperienceCard = (props: Props) => {
         <p className="uppercase py-5 text-gray-300">
           Started work... -Ended...
         </p>
-        <div className="overflow-hidden overflow-y-scroll h-auto">
+        <div className="overflow-hidden overflow-y-scroll h-3/5">
           <ul className=" list-disc space-y-4 ml-5 text-lg ">
             <li>
               Summary points Summary pointsSummary pointsSummary pointsSummary
