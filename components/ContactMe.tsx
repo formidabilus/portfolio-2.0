@@ -1,7 +1,7 @@
 import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
+import emailjs from "@emailjs/browser";
 
 type FormInputs = {
   name: string;
@@ -16,10 +16,29 @@ const ContactMe = (props: Props) => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormInputs>();
-  const onSubmit: SubmitHandler<FormInputs> = (formData) =>
-    console.log(formData);
+
+  const onSubmit: SubmitHandler<FormInputs> = (formData) => {
+    emailjs
+      .send(
+        "service_gmail",
+        "template_gmail",
+        formData,
+        `${process.env.NEXT_PUBLIC_EMAILJS_KEY}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Message sent!");
+          reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <div className="h-screen relative flex flex-col justify-evenly items-center text-center mx-auto md:text-left md:flex-row max-w-7xl px-10">
