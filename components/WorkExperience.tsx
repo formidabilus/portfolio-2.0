@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
+import FooterLogo from "./FooterLogo";
 
 type Props = {};
 
