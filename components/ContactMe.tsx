@@ -33,7 +33,7 @@ const ContactMe = (props: Props) => {
       theme: "dark",
       className: "text-[#F7AB0A]",
       bodyClassName: "text-[#F7AB0A]",
-      progressClassName: "text-[#F7AB0A]",
+      progressClassName: "bg-[#F7AB0A]",
     });
 
   const notifyError = () =>
@@ -154,7 +154,7 @@ const ContactMe = (props: Props) => {
           >
             Submit
           </button>
-          <ToastContainer />
+          <ToastContainer hideProgressBar />
         </form>
       </div>
     </div>
