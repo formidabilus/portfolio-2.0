@@ -37,7 +37,7 @@ const ExperienceCard = (props: Props) => {
         <p className="uppercase py-5 text-gray-300">
           Started work... -Ended...
         </p>
-        <div className="overflow-hidden overflow-y-scroll h-3/5">
+        <div className="overflow-hidden overflow-y-scroll h-3/5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
           <ul className=" list-disc space-y-4 ml-5 text-lg ">
             <li>
               Summary points Summary pointsSummary pointsSummary pointsSummary

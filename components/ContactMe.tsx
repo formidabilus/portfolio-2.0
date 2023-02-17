@@ -28,16 +28,16 @@ const ContactMe = (props: Props) => {
   } = useForm<FormInputs>();
 
   const notifySuccess = () =>
-    toast.success("Message sent succesfully!", {
+    toast.success("Message sent successfully!", {
       icon: <EnvelopeOpenIcon className="text-[#F7AB0A]" />,
       theme: "dark",
       className: "text-[#F7AB0A]",
-      bodyClassName: "text-[#F7AB0A]",
+      bodyClassName: "text-[#F7AB0A] ",
       progressClassName: "bg-[#F7AB0A]",
     });
 
   const notifyError = () =>
-    toast.error("Something went wrong..:(", {
+    toast.error("Something went wrong... :(", {
       theme: "dark",
       className: "text-red-700",
       bodyClassName: "text-red-700",
