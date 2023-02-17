@@ -1,7 +1,14 @@
 import React from "react";
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import { useForm, SubmitHandler } from "react-hook-form";
+import {
+  PhoneIcon,
+  MapPinIcon,
+  EnvelopeIcon,
+  EnvelopeOpenIcon,
+} from "@heroicons/react/24/solid";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type FormInputs = {
   name: string;
@@ -20,24 +27,48 @@ const ContactMe = (props: Props) => {
     formState: { errors },
   } = useForm<FormInputs>();
 
+  const notifySuccess = () =>
+    toast.success("Message sent succesfully!", {
+      icon: <EnvelopeOpenIcon className="text-[#F7AB0A]" />,
+      theme: "dark",
+      className: "text-[#F7AB0A]",
+      bodyClassName: "text-[#F7AB0A]",
+      progressClassName: "text-[#F7AB0A]",
+    });
+
+  const notifyError = () =>
+    toast.error("Something went wrong..:(", {
+      theme: "dark",
+      className: "text-red-700",
+      bodyClassName: "text-red-700",
+      progressClassName: "bg-red-700",
+    });
+
   const onSubmit: SubmitHandler<FormInputs> = (formData) => {
-    emailjs
-      .send(
-        "service_gmail",
-        "template_gmail",
-        formData,
-        `${process.env.NEXT_PUBLIC_EMAILJS_KEY}`
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("Message sent!");
-          reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    try {
+      emailjs
+        .send(
+          "service_gmail",
+          "template_gmail",
+          formData,
+          `${process.env.NEXT_PUBLIC_EMAILJS_KEY}`
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log("Message sent!");
+            reset();
+            notifySuccess();
+          },
+          (error) => {
+            console.log(error.text);
+            notifyError();
+          }
+        );
+    } catch (error: any) {
+      console.log(error.message);
+      notifyError();
+    }
   };
 
   return (
@@ -123,6 +154,7 @@ const ContactMe = (props: Props) => {
           >
             Submit
           </button>
+          <ToastContainer />
         </form>
       </div>
     </div>

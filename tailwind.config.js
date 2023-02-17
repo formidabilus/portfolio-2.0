@@ -5,7 +5,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "toastify-color-progress-success":
+          "var(--toastify-color-progress-success)",
+        "toastify-color-progress-error": "var(--toastify-color-progress-error)",
+      },
+    },
   },
   plugins: [],
 };
