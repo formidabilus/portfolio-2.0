@@ -1,21 +1,19 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
-type Props = {
-  copyright: boolean;
-};
+type Props = {};
 
-const FooterLogo = ({ copyright = false }: Props) => {
-  let year = new Date().getFullYear();
-
+const FooterLogo = ({}: Props) => {
   return (
     <Link href="#hero">
-      <footer className="sticky bottom-5 w-full cursor-pointer ">
+      <footer id="logo" className="sticky bottom-5 w-full cursor-pointer">
         <motion.div
           className="flex flex-col items-center justify-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          whileTap={{ opacity: 0 }}
           viewport={{ once: true }}
         >
           <img
@@ -23,7 +21,6 @@ const FooterLogo = ({ copyright = false }: Props) => {
             src="navigateuplogo.jpg"
             alt="logo"
           />
-          {copyright ? <p> &copy; {year} Razvan Chiriac</p> : null}
         </motion.div>
       </footer>
     </Link>

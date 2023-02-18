@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import FooterLogo from "./FooterLogo";
 
 type Props = {};
 
@@ -8,7 +7,7 @@ const About = (props: Props) => {
   return (
     <motion.div
       className="relative flex flex-col h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center 
-    "
+      "
       initial={{
         opacity: 0,
       }}

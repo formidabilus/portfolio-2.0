@@ -7,7 +7,6 @@ import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
-import Link from "next/link";
 import FooterLogo from "../components/FooterLogo";
 
 const Home: NextPage = () => {
@@ -43,30 +42,28 @@ const Home: NextPage = () => {
         <Hero />
       </section>
 
-      <section id="about" className="snap-center">
-        <About />
-        <FooterLogo copyright={false} />
-      </section>
+      <div className="relative">
+        <section id="about" className="snap-center">
+          <About />
+        </section>
 
-      <section id="experience" className="snap-center">
-        <WorkExperience />
-        <FooterLogo copyright={false} />
-      </section>
+        <section id="experience" className="snap-center">
+          <WorkExperience />
+        </section>
 
-      <section id="skills" className="snap-start">
-        <Skills />
-        <FooterLogo copyright={false} />
-      </section>
+        <section id="skills" className="snap-start">
+          <Skills />
+        </section>
 
-      <section id="projects" className="snap-start">
-        <Projects />
-        <FooterLogo copyright={false} />
-      </section>
+        <section id="projects" className="snap-start">
+          <Projects />
+        </section>
+        <section id="contact" className="snap-start">
+          <ContactMe />
+        </section>
 
-      <section id="contact" className="snap-start">
-        <ContactMe />
-        <FooterLogo copyright />
-      </section>
+        <FooterLogo />
+      </div>
     </div>
   );
 };
