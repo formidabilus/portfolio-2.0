@@ -1,9 +1,9 @@
-import Image from "next/image";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
-import profilePicture from "../public/profile_avatar.jpg";
 import Link from "next/link";
+import Image from "next/image";
+import profilePicture from "../public/profile_avatar.jpg";
 
 type Props = {};
 
