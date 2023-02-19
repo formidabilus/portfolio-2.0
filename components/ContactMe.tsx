@@ -164,7 +164,7 @@ const ContactMe = (props: Props) => {
         </div>
       </div>
       <motion.p
-        className="sticky bottom-1 flex justify-center"
+        className="sticky bottom-[0.05rem] flex justify-center"
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}

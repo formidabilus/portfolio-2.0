@@ -14,7 +14,7 @@ const FooterLogo = ({}: Props) => {
         className="h-10 w-10 mx-auto sticky bottom-5 cursor-pointer"
       >
         <motion.div
-          className="flex justify-center"
+          className="flex h-10 w-10 justify-center"
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
