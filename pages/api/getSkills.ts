@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiHandler, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 import { groq } from "next-sanity";
 import { sanityClient } from "../../sanity";
 import { Skill } from "../../typings";
@@ -18,4 +18,3 @@ export default async function handler(
   const skills: Skill[] = await sanityClient.fetch(query);
   res.status(200).json({ skills });
 }
-0;
