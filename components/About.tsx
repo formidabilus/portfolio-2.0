@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
 type Props = {
   pageInfo: PageInfo;
 };
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       className="relative flex flex-col h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center 
@@ -38,7 +39,7 @@ const About = (props: Props) => {
           x: 0,
         }}
         viewport={{ once: true }}
-        src="./about_picture.jpg"
+        src={urlFor(pageInfo?.profilePicture).url()}
       />
       <div className="space-y-10 px-0 md:px-10 ">
         <h4 className="text-4xl font-semibold">
@@ -46,7 +47,7 @@ const About = (props: Props) => {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">background text</p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
