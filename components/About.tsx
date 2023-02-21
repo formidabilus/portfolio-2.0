@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
 const About = (props: Props) => {
   return (

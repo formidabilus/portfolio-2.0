@@ -15,6 +15,16 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "tailwind.config.js"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "tailwind.config.js",
+    "schemas/social.js",
+    "schemas/skill.js",
+    "schemas/project.js",
+    "schemas/pageInfo.js",
+    "schemas/index.ts",
+    "schemas/experience.js"
+  ],
   "exclude": ["node_modules"]
 }
