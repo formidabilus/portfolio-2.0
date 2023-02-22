@@ -9,7 +9,6 @@ type Props = {
 };
 
 const ExperienceCard = ({ experience }: Props) => {
-  console.log(experience.technologies);
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
@@ -36,7 +35,7 @@ const ExperienceCard = ({ experience }: Props) => {
         <h4 className="text-4xl font-light">Job title</h4>
         <p className="font-bold text-2xl mt-1">company</p>
         <div className="flex space-x-2 my-2">
-          {experience?.technologies.map((technology) => (
+          {experience?.technologies?.map((technology) => (
             <div key={technology?._id} className="h-10 w-10 relative">
               <Image
                 className="rounded-full"

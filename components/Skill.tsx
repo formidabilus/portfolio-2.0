@@ -1,11 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Skill } from "../typings";
+import { urlFor } from "../sanity";
 
 type Props = {
+  skill: Skill;
   directionLeft?: boolean;
 };
 
-const Skill = ({ directionLeft }: Props) => {
+const Skill = ({ skill, directionLeft }: Props) => {
   return (
     <div className="group relative flex cursor-pointer">
       <motion.img
@@ -21,7 +24,7 @@ const Skill = ({ directionLeft }: Props) => {
         transition={{
           duration: 1,
         }}
-        src=""
+        src={urlFor(skill?.image).url()}
         alt="skill"
       />
       <motion.div
@@ -37,7 +40,9 @@ const Skill = ({ directionLeft }: Props) => {
         }}
       >
         <div className="flex items-center justify-center h-full">
-          <p className="text-3xl font-bold text-black opacity-100">100%</p>
+          <p className="text-3xl font-bold text-black opacity-100">
+            {skill.progress}
+          </p>
         </div>
       </motion.div>
     </div>
