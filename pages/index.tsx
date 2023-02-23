@@ -73,7 +73,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
           <Projects projects={projects} />
         </section>
         <section id="contact" className="snap-start">
-          <ContactMe />
+          <ContactMe pageInfo={pageInfo} />
         </section>
 
         <FooterLogo />

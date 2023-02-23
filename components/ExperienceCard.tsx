@@ -9,10 +9,18 @@ type Props = {
 };
 
 const ExperienceCard = ({ experience }: Props) => {
+  const dateStarted = new Date(experience?.dateStarted).toLocaleDateString(
+    "en-us",
+    { year: "numeric", month: "short" }
+  );
+  const dateEnded = new Date(experience?.dateEnded).toLocaleDateString(
+    "en-us",
+    { year: "numeric", month: "short" }
+  );
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[800px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
-        className="w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-32 h-32 rounded-full md:rounded-full xl:w-36  xl:h-36 object-cover object-center"
         initial={{
           y: -100,
           opacity: 0,
@@ -32,14 +40,14 @@ const ExperienceCard = ({ experience }: Props) => {
       />
 
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">Job title</h4>
-        <p className="font-bold text-2xl mt-1">company</p>
+        <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
+        <p className="font-bold text-2xl mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2">
           {experience?.technologies?.map((technology) => (
             <div key={technology?._id} className="h-10 w-10 relative">
               <Image
                 className="rounded-full"
-                objectFit="cover"
+                objectFit="contain"
                 layout="fill"
                 src={urlFor(technology?.image).url()}
                 alt="tech image"
@@ -49,13 +57,11 @@ const ExperienceCard = ({ experience }: Props) => {
         </div>
 
         <p className="uppercase py-5 text-gray-300">
-          {new Date(experience?.dateStarted).toDateString()} -{" "}
-          {experience.isCurrentlyWorkingHere
-            ? "Present"
-            : new Date(experience.dateEnded).toDateString()}
+          {dateStarted} -{" "}
+          {experience.isCurrentlyWorkingHere ? "Present" : dateEnded}
         </p>
         <div className="overflow-hidden overflow-y-scroll h-3/5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-          <ul className=" list-disc space-y-4 ml-5 text-lg ">
+          <ul className="h-10 w-full list-disc space-y-4 ml-5 text-lg ">
             {experience?.points.map((point, i) => (
               <li key={i}>{point}</li>
             ))}

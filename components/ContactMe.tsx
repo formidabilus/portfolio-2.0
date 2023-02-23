@@ -10,6 +10,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
 
 type FormInputs = {
   name: string;
@@ -18,9 +19,11 @@ type FormInputs = {
   message: string;
 };
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const ContactMe = (props: Props) => {
+const ContactMe = ({ pageInfo }: Props) => {
   const {
     register,
     handleSubmit,
@@ -91,17 +94,17 @@ const ContactMe = (props: Props) => {
           <div className="space-y-10">
             <div className="flex justify-center items-center space-x-5">
               <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-              <p className="text-2xl">+40747520970</p>
+              <p className="text-2xl">{pageInfo.phoneNumber}</p>
             </div>
 
             <div className="flex justify-center items-center space-x-5">
               <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-              <p className="text-2xl">chiriac_razvan@ymail.com</p>
+              <p className="text-2xl">{pageInfo.email}</p>
             </div>
 
             <div className="flex justify-center items-center space-x-5">
               <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-              <p className="text-2xl">Iasi, Romania / Remote</p>
+              <p className="text-2xl">{pageInfo.address}</p>
             </div>
           </div>
           <form
