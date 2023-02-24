@@ -24,7 +24,8 @@
     "schemas/project.js",
     "schemas/pageInfo.js",
     "schemas/index.ts",
-    "schemas/experience.js"
+    "schemas/experience.js",
+    "sanity.config.ts"
   ],
   "exclude": ["node_modules"]
 }
