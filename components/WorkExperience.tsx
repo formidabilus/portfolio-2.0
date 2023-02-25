@@ -26,17 +26,18 @@ const WorkExperience = ({ experiences }: Props) => {
       </h3>
 
       <div className="w-full md:h-[70%] flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory  scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {experiences
-          ? experiences
-              ?.sort(
-                (lastestJob, previousJob) =>
-                  parseInt(previousJob.dateEnded) -
-                  parseInt(lastestJob.dateEnded)
-              )
-              .map((experience) => (
-                <ExperienceCard key={experience._id} experience={experience} />
-              ))
-          : null}
+        {experiences ? (
+          experiences
+            ?.sort(
+              (lastestJob, previousJob) =>
+                parseInt(previousJob.dateEnded) - parseInt(lastestJob.dateEnded)
+            )
+            .map((experience) => (
+              <ExperienceCard key={experience._id} experience={experience} />
+            ))
+        ) : (
+          <h1 className="flex center items-center">Loading...</h1>
+        )}
       </div>
     </motion.div>
   );
