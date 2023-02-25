@@ -23,7 +23,7 @@
     "schemas/skill.js",
     "schemas/project.js",
     "schemas/pageInfo.js",
-    "schemas/index.ts",
+    "schemas/index.js",
     "schemas/experience.js",
     "./sanity.config.ts",
     "./sanity.cli.ts",
