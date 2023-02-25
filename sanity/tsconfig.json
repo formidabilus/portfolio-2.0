@@ -25,7 +25,9 @@
     "schemas/pageInfo.js",
     "schemas/index.ts",
     "schemas/experience.js",
-    "sanity.config.ts"
+    "./sanity.config.ts",
+    "./sanity.cli.ts",
+    "../sanity/ts"
   ],
   "exclude": ["node_modules"]
 }

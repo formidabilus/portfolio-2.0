@@ -19,6 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    ".next/types/**/*.ts",
     "sanity/tailwind.config.js",
     "sanity/schemas/social.js",
     "sanity/schemas/skill.js",
