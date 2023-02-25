@@ -17,7 +17,7 @@ const Projects = ({ projects }: Props) => {
         {projects.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44"
           >
             <motion.img
               src={urlFor(project?.image).url()}
@@ -50,7 +50,7 @@ const Projects = ({ projects }: Props) => {
                   <div key={technology._id} className="h-10 w-10 relative">
                     <Image
                       className="rounded-full"
-                      objectFit="cover"
+                      objectFit="contain"
                       layout="fill"
                       src={urlFor(technology.image).url()}
                       alt="technology"
@@ -59,7 +59,7 @@ const Projects = ({ projects }: Props) => {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left">
+              <p className="text-lg text-center md:text-left pb-10">
                 {project?.summary}
               </p>
             </div>
