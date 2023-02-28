@@ -19,30 +19,37 @@ const Projects = ({ projects }: Props) => {
             key={project._id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44"
           >
-            <motion.img
-              src={urlFor(project?.image).url()}
-              alt="project"
-              initial={{
-                y: -300,
-                opacity: 0,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 1.2,
-              }}
-              viewport={{
-                once: true,
-              }}
-            />
+            <a href={`${project.linkToBuild}`}>
+              <motion.img
+                src={urlFor(project?.image).url()}
+                alt="project"
+                initial={{
+                  y: -300,
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 1.2,
+                }}
+                viewport={{
+                  once: false,
+                }}
+              />
+            </a>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
-                <span className="underline decoration-[#F7AB0A]">
+                <span className="">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
-                {project?.title}
+                <a
+                  className="underline decoration-[#F7AB0A]"
+                  href={`${project.linkToBuild}`}
+                >
+                  {project?.title}
+                </a>
               </h4>
 
               <div className="flex items-center space-x-2 justify-center">

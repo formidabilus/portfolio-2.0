@@ -18,7 +18,7 @@ const ExperienceCard = ({ experience }: Props) => {
     { year: "numeric", month: "short" }
   );
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[800px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col items-center sm:justify-start justify-around rounded-lg  space-y-7 flex-shrink-0 w-screen sm:w-[500px] md:w-[600px] xl:w-[800px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         className="w-32 h-32 rounded-full md:rounded-full xl:w-36  xl:h-36 object-cover object-center"
         initial={{
@@ -42,7 +42,7 @@ const ExperienceCard = ({ experience }: Props) => {
       <div className="px-0 md:px-10">
         <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
         <p className="font-bold text-2xl mt-1">{experience.company}</p>
-        <div className="flex space-x-2 my-2">
+        <div className="flex space-x-2 my-2 flex-wrap">
           {experience?.technologies?.map((technology) => (
             <div key={technology?._id} className="h-10 w-10 relative">
               <Image
@@ -60,7 +60,7 @@ const ExperienceCard = ({ experience }: Props) => {
           {dateStarted} -{" "}
           {experience.isCurrentlyWorkingHere ? "Present" : dateEnded}
         </p>
-        <div className="overflow-hidden overflow-y-scroll h-3/5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+        <div className="hidden sm:block overflow-hidden overflow-y-scroll h-3/5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
           <ul className="h-10 w-full list-disc space-y-4 ml-5 text-lg ">
             {experience?.points.map((point, i) => (
               <li key={i}>{point}</li>

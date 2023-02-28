@@ -22,11 +22,11 @@ const About = ({ pageInfo }: Props) => {
         duration: 1.5,
       }}
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="hidden sm:inline absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
       <motion.img
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-fill md: md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] md:object-contain"
+        className="-mb-20 md:mb-0 flex-shrink-0  w-48 h-48 sm:w-56 sm:h-56 rounded-full object-fill md: md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] md:object-contain"
         initial={{
           x: -200,
           opacity: 0,
@@ -47,7 +47,7 @@ const About = ({ pageInfo }: Props) => {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">{pageInfo?.backgroundInformation}</p>
+        <p className="text-base pb-4">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
