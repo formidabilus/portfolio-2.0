@@ -111,7 +111,7 @@ const ContactMe = ({ pageInfo }: Props) => {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col space-y-2 w-fit mx-auto"
           >
-            <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm">
+            <div className="flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-2">
               <div>
                 <input
                   {...register("name", { required: true })}
