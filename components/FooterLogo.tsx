@@ -11,7 +11,7 @@ const FooterLogo = ({}: Props) => {
     <Link href="#hero">
       <footer
         id="logo"
-        className="h-10 w-10 mx-auto sticky bottom-5 cursor-pointer"
+        className="hidden sm:block h-10 w-10 mx-auto sticky bottom-5 cursor-pointer"
       >
         <motion.div
           className="flex h-10 w-10 justify-center"

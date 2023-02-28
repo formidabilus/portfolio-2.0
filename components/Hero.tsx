@@ -44,7 +44,7 @@ const Hero = ({ pageInfo }: Props) => {
             <Cursor cursorColor="#F7AB0A" />
           </span>
         </h2>
-        <div className="pt-72 sm:pt-5">
+        <div className="pt-72 mb-5 sm:mb-0 sm:pt-5">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

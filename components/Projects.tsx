@@ -21,6 +21,7 @@ const Projects = ({ projects }: Props) => {
           >
             <a href={`${project.linkToBuild}`}>
               <motion.img
+                className="hidden sm:block"
                 src={urlFor(project?.image).url()}
                 alt="project"
                 initial={{
@@ -35,12 +36,12 @@ const Projects = ({ projects }: Props) => {
                   duration: 1.2,
                 }}
                 viewport={{
-                  once: false,
+                  once: true,
                 }}
               />
             </a>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+              <h4 className="text-4xl pt-20 font-semibold text-center">
                 <span className="">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}

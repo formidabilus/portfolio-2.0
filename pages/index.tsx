@@ -25,7 +25,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden scroll-smooth z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+    <div className="bg-[rgb(36,36,36)] text-white h-[100dvh] sm:h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden  scroll-smooth z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
         <title>Razvan Chiriac - Portfolio</title>
 
@@ -50,8 +50,8 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Header socials={socials} />
 
+      <Header socials={socials} />
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
       </section>
@@ -75,7 +75,6 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <section id="contact" className="snap-start">
           <ContactMe pageInfo={pageInfo} />
         </section>
-
         <FooterLogo />
       </div>
     </div>

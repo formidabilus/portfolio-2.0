@@ -79,13 +79,13 @@ const ContactMe = ({ pageInfo }: Props) => {
 
   return (
     <div className="relative">
-      <div className="h-screen relative flex flex-col justify-evenly items-center text-center mx-auto md:text-left md:flex-row max-w-7xl px-10">
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <div className="h-screen flex flex-col justify-evenly items-center text-center mx-auto md:text-left md:flex-row max-w-7xl px-10">
+        <h3 className="hidden sm:block absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
           Contact
         </h3>
 
-        <div className="flex flex-col space-y-10">
-          <h4 className="text-4xl font-semibold text-center">
+        <div className="flex flex-col space-y-5 sm:space-y-10">
+          <h4 className="text-4xl font-semibold text-center hidden sm:block">
             I have got just what you need.{" "}
             <span className="decoration-[#F7AB0A]/50 underline">
               Let&apos;s Talk.
@@ -102,7 +102,7 @@ const ContactMe = ({ pageInfo }: Props) => {
               <p className="text-2xl">{pageInfo.email}</p>
             </div>
 
-            <div className="flex justify-center items-center space-x-5">
+            <div className="hidden sm:flex justify-center items-center space-x-5">
               <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
               <p className="text-2xl">{pageInfo.address}</p>
             </div>
@@ -111,7 +111,7 @@ const ContactMe = ({ pageInfo }: Props) => {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col space-y-2 w-fit mx-auto"
           >
-            <div className="flex space-x-2">
+            <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm">
               <div>
                 <input
                   {...register("name", { required: true })}
