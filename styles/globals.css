@@ -5,6 +5,7 @@
 :root {
   --toastify-color-progress-success: #f7ab0a;
   --toastify-color-progress-error: text-red-700;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @layer components {

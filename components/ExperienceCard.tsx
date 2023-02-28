@@ -18,7 +18,7 @@ const ExperienceCard = ({ experience }: Props) => {
     { year: "numeric", month: "short" }
   );
   return (
-    <article className="flex flex-col items-center sm:justify-start justify-around rounded-lg  space-y-7 flex-shrink-0 w-screen sm:w-[500px] md:w-[600px] xl:w-[800px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col items-center sm:justify-start justify-around rounded-lg  space-y-7 flex-shrink-0 w-screen sm:w-[500px] md:w-[600px] xl:w-[800px] snap-center bg-[#292929] p-10 sm:opacity-40 sm:hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         className="w-32 h-32 rounded-full md:rounded-full xl:w-36  xl:h-36 object-cover object-center"
         initial={{

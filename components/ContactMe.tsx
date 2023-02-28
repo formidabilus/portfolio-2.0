@@ -80,7 +80,7 @@ const ContactMe = ({ pageInfo }: Props) => {
   return (
     <div className="relative">
       <div className="h-screen flex flex-col justify-evenly items-center text-center mx-auto md:text-left md:flex-row max-w-7xl px-10">
-        <h3 className="hidden sm:block absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
           Contact
         </h3>
 
@@ -91,7 +91,7 @@ const ContactMe = ({ pageInfo }: Props) => {
               Let&apos;s Talk.
             </span>
           </h4>
-          <div className="space-y-10">
+          <div className="space-y-6 pt-20 sm:pt-0 sm:space-y-10">
             <div className="flex justify-center items-center space-x-5">
               <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
               <p className="text-2xl">{pageInfo.phoneNumber}</p>
@@ -158,7 +158,7 @@ const ContactMe = ({ pageInfo }: Props) => {
                 opacity: 0,
               }}
               type="submit"
-              className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+              className="bg-[#F7AB0A] mb-1 sm:mb-0 py-5 px-10 rounded-md text-black font-bold text-lg"
             >
               Submit
             </motion.button>
