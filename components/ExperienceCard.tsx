@@ -60,7 +60,7 @@ const ExperienceCard = ({ experience }: Props) => {
           {dateStarted} -{" "}
           {experience.isCurrentlyWorkingHere ? "Present" : dateEnded}
         </p>
-        <div className="hidden sm:block overflow-hidden overflow-y-scroll h-3/5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+        <div className="hidden sm:block overflow-hidden overflow-y-scroll overflow-x-hidden h-3/5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
           <ul className="h-10 w-full list-disc space-y-4 ml-5 text-lg ">
             {experience?.points.map((point, i) => (
               <li key={i}>{point}</li>

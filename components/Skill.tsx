@@ -26,8 +26,8 @@ const Skill = ({ skill, directionLeft }: Props) => {
           opacity: 0,
         }}
         whileInView={{
-          opacity: 1,
           x: 0,
+          opacity: 1,
         }}
         transition={{
           duration: 1,
