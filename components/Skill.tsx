@@ -20,7 +20,7 @@ const Skill = ({ skill, directionLeft }: Props) => {
   return (
     <div className="group relative flex cursor-pointer">
       <motion.img
-        className="rounded-full border border-gray-500 object-contain h-10 w-10 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
+        className="rounded-full border border-gray-500 object-contain h-10 w-10 sm:w-24 sm:h-24 md:w-26 md:h-26 xl:w-26 xl:h-26 filter group-hover:grayscale transition duration-300 ease-in-out"
         initial={{
           x: directionLeft ? "-100%" : "100%",
           opacity: 0,
@@ -39,7 +39,7 @@ const Skill = ({ skill, directionLeft }: Props) => {
         alt="skill"
       />
       <motion.div
-        className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-10 w-10 sm:h-24 sm:w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0"
+        className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-10 w-10 sm:h-24 sm:w-24 md:w-26 md:h-26 xl:w-26 xl:h-26 rounded-full z-0"
         initial={{
           x: directionLeft ? "-100%" : "100%",
         }}

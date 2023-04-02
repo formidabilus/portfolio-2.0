@@ -35,5 +35,10 @@ export default defineType({
       title: 'LinkToBuild',
       type: 'url',
     }),
+    defineField({
+      name: 'linkToGit',
+      title: 'LinkToGit',
+      type: 'url',
+    }),
   ],
 })

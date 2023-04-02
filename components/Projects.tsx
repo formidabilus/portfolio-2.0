@@ -41,14 +41,23 @@ const Projects = ({ projects }: Props) => {
               />
             </a>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl pt-20 font-semibold text-center">
+              <h4 className="text-4xl pt-5 font-semibold text-center">
                 <span className="">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
                 <a
-                  className="underline decoration-[#F7AB0A]"
-                  href={`${project.linkToBuild}`}
+                  className="underline decoration-[#F7AB0A] inline-flex"
+                  href={`${project.linkToGit}`}
                 >
+                  <div className="h-10 w-10 relative">
+                    <Image
+                      className="rounded-full"
+                      objectFit="contain"
+                      layout="fill"
+                      src="/github.png"
+                      alt="Github"
+                    />
+                  </div>
                   {project?.title}
                 </a>
               </h4>
