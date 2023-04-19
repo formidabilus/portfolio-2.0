@@ -40,7 +40,7 @@ const Projects = ({ projects }: Props) => {
                 }}
               />
             </a>
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-10 px-0 md:px-10 max-w-6xl pt-32 md:pt-0">
               <h4 className="text-4xl pt-5 font-semibold text-center">
                 <span className="">
                   Case Study {i + 1} of {projects.length}:
@@ -76,7 +76,7 @@ const Projects = ({ projects }: Props) => {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left pb-10">
+              <p className="text-lg text-center md:text-left pb-10 overflow-y-scroll h-1/3 text-ellipsis scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
                 {project?.summary}
               </p>
             </div>
