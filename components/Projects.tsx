@@ -9,7 +9,7 @@ type Props = { projects: Project[] };
 const Projects = ({ projects }: Props) => {
   return (
     <motion.div className="h-screen relative flex flex-col justify-evenly items-center text-left md:flex-row max-w-full mx-auto overflow-hidden z-0">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="hidden sm:inline absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
 
