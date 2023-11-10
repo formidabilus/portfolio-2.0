@@ -22,7 +22,7 @@ const FooterLogo = ({}: Props) => {
           viewport={{ once: true }}
         >
           <Image
-            className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+            className="rounded-full ring ring-inset filter grayscale hover:grayscale-0 cursor-pointer"
             src={navigateUpLogo}
             alt="logo"
           />
